@@ -15,7 +15,8 @@ jobs:
         with:
           fetch-depth: 0
       - name: Clone Project
-        run: git clone -b main --depth=1 https://github.com/gjf026/dr0601.git
+ #       run: git clone -b main --depth=1 https://github.com/gjf026/dr0601.git
+        run: git clone -b main --depth=1 https://github.com/gjf026/tvbox717.git
       - name: DIY
         run: |
           chmod +x diy-J.sh
