@@ -18,6 +18,14 @@ jobs:
       - name: Clone Project
      #  run: git clone -b main --depth=1 https://github.com/gjf026/dr0601.git
         run: git clone -b main --depth=1 https://github.com/gjf026/25327
+         - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.8'  # 可以改为 '3.9' 或 '3.11' 具体版本
+
+      - name: Install Python dependencies
+        run: |
+          pip install -r requirements.txt || echo "No requirements.txt found"
       - name: DIY
         run: |
           chmod +x diy-J.sh
