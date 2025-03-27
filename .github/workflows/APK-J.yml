@@ -18,8 +18,7 @@ jobs:
       - name: Clone Project
      #  run: git clone -b main --depth=1 https://github.com/gjf026/dr0601.git
         run: git clone -b main --depth=1 https://github.com/gjf026/25327
-      - name: Create local.properties
-        run: echo "sdk.dir=$ANDROID_SDK_ROOT" > local.properties
+     
       - name: Setup Python  
         uses: actions/setup-python@v5
         with:
