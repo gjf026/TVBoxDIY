@@ -32,6 +32,14 @@ jobs:
       - name: Install Python dependencies
         run: |
           pip install -r requirements.txt || echo "No requirements.txt found"
+      - name: Modify pyramid——build.gradle
+        working-directory: TVBoxOSC
+        run: |
+          # 替换Windows路径为系统Python路径
+          sed -i '/buildPython("D:\/Programs\/Python\/Python38\/python.exe")/d' pyramid/build.gradle
+      - name: Setup Python local.properties
+        working-directory: TVBoxOSC
+        run: echo "" > local.properties    
       - name: DIY
         run: |
           chmod +x diy-J.sh
