@@ -37,6 +37,7 @@ jobs:
         run: |
           # 替换Windows路径为系统Python路径
           sed -i '/buildPython("D:\/Programs\/Python\/Python38\/python.exe")/d' pyramid/build.gradle
+          sed -i '$ s/^#//' ./gradle.properties
       - name: Setup Python local.properties
         working-directory: ./25041
         run: echo "" > local.properties    
