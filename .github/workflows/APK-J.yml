@@ -17,7 +17,7 @@ jobs:
           fetch-depth: 0
       - name: Clone Project
      #  run: git clone -b main --depth=1 https://github.com/gjf026/dr0601.git
-        run: git clone -b main --depth=1 https://github.com/gjf026/2606251
+        run: git clone -b main --depth=1 https://github.com/gjf026/260626
      # - name: Setup Android SDK
     #    uses: android-actions/setup-android@v2
       #  with:
@@ -33,13 +33,13 @@ jobs:
         run: |
           pip install -r requirements.txt || echo "No requirements.txt found"
       - name: Modify pyramid——build.gradle
-        working-directory: ./2606251
+        working-directory: ./260626
         run: |
           # 替换Windows路径为系统Python路径
           sed -i '/buildPython("D:\/Programs\/Python\/Python38\/python.exe")/d' pyramid/build.gradle
           sed -i '$ s/^#//' ./gradle.properties
       - name: Setup Python local.properties
-        working-directory: ./2606251
+        working-directory: ./260626
         run: echo "" > local.properties    
       - name: DIY
         run: |
