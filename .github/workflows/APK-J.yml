@@ -17,7 +17,7 @@ jobs:
           fetch-depth: 0
       - name: Clone Project
      #  run: git clone -b main --depth=1 https://github.com/gjf026/dr0601.git
-        run: git clone -b main --depth=1 https://github.com/gjf026/260701
+        run: git clone -b dev --depth=1 https://github.com/gjf026/260701
      # - name: Setup Android SDK
     #    uses: android-actions/setup-android@v2
       #  with:
